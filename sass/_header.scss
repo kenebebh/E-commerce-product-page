@@ -129,3 +129,15 @@
   color: $color-white;
   font-size: 2rem;
 }
+
+// @include respond(tab-port) {
+//   .cart-display {
+//     width: 80%;
+//     top: 9%;
+//     right: 0;
+//     height: 35rem;
+//     transform: translateX(-40%);
+//     visibility: hidden;
+//     animation: moveInRight 1s ease-in;
+//   }
+// }
