@@ -25,10 +25,14 @@ html {
 body {
   box-sizing: border-box;
   padding: 3rem;
-  position: relative;
-  z-index: 200;
 
   @include respond(tab-port) {
     padding: 0;
   }
+}
+
+.body-container {
+  width: 100vw;
+  position: relative;
+  z-index: 200;
 }

@@ -16,58 +16,43 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 11px; text-align: center; margin: 4rem 0 0; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
 
-<div class="body-container">
-  <header class="header">
-    <div class="left-side">
-      <div class="navigation">
-        <div class="nav__icon-container">
+<div class="body-container flex fd-c jc-c">
+
+  <header class="header flex jc-sb ai-c">
+    <div class="left-side flex jc-sb">
+        <div class="nav__icon-container flex ai-c">
           <img src="images/icon-menu.svg" alt="navigation" class="nav__icon">
         </div>
-        <nav class="nav">
-          <div class="nav__close-container close-container">
-            <svg width="14" height="15" class="close" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"/></svg>
-          </div>
-          <ul class="nav__container">
-            <li class="nav__list"><a href="#" target="_blank" rel="noopener noreferrer" class="nav__link">Collections</a></li>
-            <li class="nav__list"><a href="#" target="_blank" rel="noopener noreferrer" class="nav__link">Men</a></li>
-            <li class="nav__list"><a href="#" target="_blank" rel="noopener noreferrer" class="nav__link">Women</a></li>
-            <li class="nav__list"><a href="#" target="_blank" rel="noopener noreferrer" class="nav__link">About</a></li>
-            <li class="nav__list"><a href="#" target="_blank" rel="noopener noreferrer" class="nav__link">Contact</a></li>
-          </ul>
-        </nav>
-
-        <div class="product-header-container">
-          <h1 class="product-header">sneakers</h1>
-        </div>
+  
+      <div class="product-header-container">
+        <h1 class="product-header">sneakers</h1>
       </div>
+
+      <nav class="nav">
+        <div class="nav__close-container close-container">
+          <svg width="14" height="15" class="close" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"/></svg>
+        </div>
+        <ul class="nav__container">
+          <li class="nav__list"><a href="#" target="_blank" rel="noopener noreferrer" class="nav__link">Collections</a></li>
+          <li class="nav__list"><a href="#" target="_blank" rel="noopener noreferrer" class="nav__link">Men</a></li>
+          <li class="nav__list"><a href="#" target="_blank" rel="noopener noreferrer" class="nav__link">Women</a></li>
+          <li class="nav__list"><a href="#" target="_blank" rel="noopener noreferrer" class="nav__link">About</a></li>
+          <li class="nav__list"><a href="#" target="_blank" rel="noopener noreferrer" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
     </div>
 
-    <div class="right-side">
+    <div class="right-side flex ai-c js-sb">
       <div class="cart__container">
+        <div class="cart-icon__container">
         <img src="images/icon-cart.svg" alt="cart" class="cart-icon">
         <span class="cart-notification">3</span>
-        <div class="cart-display">
-          <h4 class="cart-title">Cart</h4>
-          <p class="empty-cart-text">Your cart is empty</p>
-          <div class="cart-items">
-            <div class="top-cart">
-              <img src="images/image-product-1-thumbnail.jpg" alt="product" class="cart-product-image">
-              <div class="cart-main-details">
-                <p class="product-name__cart">  Fall Limited Edition Sneakers</p>
-                <p class="product-price"> $125.00 x <span class="quantity">3 $</span><span class="total-price">375</span>.00</p>
-              </div>
-              <img src="images/icon-delete.svg" alt="delete" class="trash-items">
-            </div>
-            <div class="buy">
-              <button class="checkout-button">Checkout</button>
-            </div>
-          </div>
         </div>
       </div>
     
@@ -77,18 +62,35 @@
     </div>
   </header>
 
+  <div class="cart-display flex fd-c">
+    <h4 class="cart-title">Cart</h4>
+    <p class="empty-cart-text jc-c">Your cart is empty</p>
+    <div class="cart-items">
+      <div class="top-cart flex">
+        <img src="images/image-product-1-thumbnail.jpg" alt="product" class="cart-product-image">
+        <div class="cart-main-details">
+          <p class="product-name__cart">  Fall Limited Edition Sneakers</p>
+          <p class="product-price"> $125.00 x <span class="quantity">3 $</span><span class="total-price">375</span>.00</p>
+        </div>
+        <img src="images/icon-delete.svg" alt="delete" class="trash-items">
+      </div>
+      <div class="buy">
+        <button class="checkout-button">Checkout</button>
+      </div>
+    </div>
+  </div>
+
   <main class="main">
     <div class="main-container">
 
       <div class="product-view">
         <div class="main-img__container">
           <img src="images/image-product-1.jpg" alt="product" class="main-img">
-          <div class="previous">
+         
             <img src="images/icon-previous.svg" alt="previous" class="previous">
-          </div>
-          <div class="next">
+
             <img src="images/icon-next.svg" alt="next" class="next">
-          </div>
+          
         </div>
         <div class="all-imgs__container">
           <img src="images/image-product-1-thumbnail.jpg" alt="product" class="all-pictures">
@@ -99,31 +101,31 @@
       </div>
 
       <div class="product-content">
-        <p class="product-class">Sneaker Company</p>
+        <h4 class="product-class">Sneaker Company</h4>
         <h2 class="product-name">Fall Limited Edition Sneakers</h2>
         <p class="product-info">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
-        <div class="product-price-box">
+        <div class="product-price-box flex jc-sb ai-c">
 
-          <div class="current">
-          <p class="product-price">$125.00</p>
-          <p class="discount">50%</p>
+          <div class="current flex ai-c">
+          <h5 class="product-price">$125.00</h5>
+          <h5 class="discount">50%</h5>
         </div>
 
         <div class="initial">
-          <p class="old-price">$250.00</p>
+          <h5 class="old-price">$250.00</h5>
         </div>
         </div>
 
-        <div class="cta-container">
-          <div class="quantity-box">
+        <div class="cta-container flex">
+          <div class="quantity-box flex ai-c jc-sb">
             <img src="images/icon-minus.svg" alt="minus" class="product-quantity-control minus">
-            <input type="text" name="number" id="number" value="0" style="text-align: center;">
+            <input type="text" name="number" id="number" class="number" value="0" style="text-align: center;">
             <img src="images/icon-plus.svg" alt="add" class="product-quantity-control add">
           </div>
 
           <div class="add-to-cart-div">
-            <button class="add-to-cart">
-              <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#fff" fill-rule="nonzero"/></svg>
+            <button class="add-to-cart flex ai-c jc-c">
+              <svg width="22" height="20" viewBox="0 0 25 22" class="cta-cart" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#fff" fill-rule="nonzero"/></svg>
 
               Add to cart
             </button>
@@ -140,7 +142,7 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/kenebebh">Kene</a>.
   </div>
 
   <div class="overlay hidden">overlay</div>

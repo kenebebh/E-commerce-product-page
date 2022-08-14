@@ -4,26 +4,26 @@
   background-color: white;
   z-index: 1000;
   height: 100%;
-  width: 50%;
+  width: 70%;
   top: 0;
-
   &__container {
     list-style: none;
   }
-
   &__list {
     margin-bottom: 1rem;
   }
-
   &__link {
     text-decoration: none;
     color: black;
     font-weight: bold;
   }
-
   &__close-container {
     margin-bottom: 3rem;
   }
+}
+
+.nav__icon-container {
+  margin-right: 2rem;
 }
 
 .close {
