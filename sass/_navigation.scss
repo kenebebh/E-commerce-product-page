@@ -1,0 +1,49 @@
+.nav {
+  display: none;
+  position: absolute;
+  background-color: white;
+  z-index: 1000;
+  height: 100%;
+  width: 50%;
+  top: 0;
+
+  &__container {
+    list-style: none;
+  }
+
+  &__list {
+    margin-bottom: 1rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+
+  &__close-container {
+    margin-bottom: 3rem;
+  }
+}
+
+.close {
+  fill: #69707d;
+
+  &:hover {
+    fill: $color-primary-orange;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-overlay;
+  z-index: 500;
+}
+
+.hidden {
+  display: none !important;
+}
