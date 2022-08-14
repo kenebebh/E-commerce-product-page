@@ -1,21 +1,25 @@
 .nav {
-  display: none;
+  // display: none;
   position: absolute;
   background-color: white;
   z-index: 1000;
   height: 100%;
   width: 70%;
   top: 0;
+  left: 0;
+  padding: 2rem;
+  visibility: hidden;
   &__container {
     list-style: none;
   }
   &__list {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
   &__link {
     text-decoration: none;
     color: black;
     font-weight: bold;
+    font-size: 2rem;
   }
   &__close-container {
     margin-bottom: 3rem;

@@ -14,6 +14,8 @@
 
   <title>Frontend Mentor | E-commerce product page</title>
 
+  <script src="js/script.js" defer></script>
+
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; margin: 4rem 0 0; }
@@ -62,15 +64,15 @@
     </div>
   </header>
 
-  <div class="cart-display flex fd-c">
+  <div class="cart-display">
     <h4 class="cart-title">Cart</h4>
-    <p class="empty-cart-text jc-c">Your cart is empty</p>
+    <p class="empty-cart-text">Your cart is empty</p>
     <div class="cart-items">
-      <div class="top-cart flex">
+      <div class="top-cart flex jc-c ai-c">
         <img src="images/image-product-1-thumbnail.jpg" alt="product" class="cart-product-image">
         <div class="cart-main-details">
           <p class="product-name__cart">  Fall Limited Edition Sneakers</p>
-          <p class="product-price"> $125.00 x <span class="quantity">3 $</span><span class="total-price">375</span>.00</p>
+          <p class="cart__product-price"> $125.00 x <span class="quantity">3</span><span class="cart__total-price"> $<span class="cart__total-price-value">375</span>.00</span></p>
         </div>
         <img src="images/icon-delete.svg" alt="delete" class="trash-items">
       </div>

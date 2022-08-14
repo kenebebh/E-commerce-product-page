@@ -13,11 +13,11 @@
 }
 
 .previous {
-  left: 0;
+  left: 5%;
 }
 
 .next {
-  right: 0;
+  right: 5%;
 }
 
 .main-img {
@@ -30,7 +30,7 @@
 
 //The bottom part
 .product-content {
-  padding: 1rem 2rem;
+  padding: 2rem 3rem;
 }
 
 .product-class {
@@ -39,6 +39,7 @@
   letter-spacing: 0.1rem;
   word-spacing: 0.2rem;
   font-size: 1.7rem;
+  margin-bottom: 1rem;
 }
 .product-name {
   font-size: 3.5rem;
