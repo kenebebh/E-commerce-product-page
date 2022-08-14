@@ -137,3 +137,20 @@ addToCartButton.addEventListener("click", function () {
     cartNotification.style.visibility = "visible";
   }
 });
+
+//delete items and checkout
+const deleteIcon = document.querySelector(".trash-items");
+const checkoutButton = document.querySelector(".checkout-button");
+
+deleteIcon.addEventListener("click", function () {
+  emptyCartText.style.display = "flex";
+  updatedCartDetailsContainer.style.display = "none";
+  cartNotification.style.visibility = "hidden";
+  numberBox.value = "0";
+});
+
+checkoutButton.addEventListener("click", function () {
+  toggle(cartDisplay);
+  cartNotification.style.visibility = "hidden";
+  numberBox.value = "0";
+});
