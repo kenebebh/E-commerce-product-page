@@ -35,4 +35,6 @@ body {
   width: 100vw;
   position: relative;
   z-index: 200;
+  transition: all 1s;
+  backface-visibility: hidden;
 }

@@ -16,6 +16,8 @@
   border-radius: 10px;
   transform: translateX(-50%);
   visibility: hidden;
+  animation: moveInRight 1s ease-in;
+
   // display: none;
   // visibility: hidden;
 }

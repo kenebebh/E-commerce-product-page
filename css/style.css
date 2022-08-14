@@ -47,7 +47,9 @@ body {
 .body-container {
   width: 100vw;
   position: relative;
-  z-index: 200; }
+  z-index: 200;
+  transition: all 1s;
+  backface-visibility: hidden; }
 
 .main-img__container {
   position: relative;
@@ -158,7 +160,8 @@ body {
   height: 30rem;
   border-radius: 10px;
   transform: translateX(-50%);
-  visibility: hidden; }
+  visibility: hidden;
+  animation: moveInRight 1s ease-in; }
 
 .product-header {
   font-size: 4rem;
@@ -261,8 +264,9 @@ body {
   width: 70%;
   top: 0;
   left: 0;
-  padding: 2rem;
-  visibility: hidden; }
+  padding: 3rem;
+  visibility: hidden;
+  animation: moveInLeft 1s ease-in; }
   .nav__container {
     list-style: none; }
   .nav__list {
