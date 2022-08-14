@@ -38,15 +38,17 @@
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   word-spacing: 0.2rem;
-  font-size: 1.3rem;
+  font-size: 1.7rem;
 }
 .product-name {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  line-height: normal;
+  margin-bottom: 2rem;
 }
 
 .product-info {
-  font-size: 1.6rem;
-  // letter-spacing: 0.rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .product-price-box {

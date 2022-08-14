@@ -81,13 +81,16 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   word-spacing: 0.2rem;
-  font-size: 1.3rem; }
+  font-size: 1.7rem; }
 
 .product-name {
-  font-size: 3rem; }
+  font-size: 3.5rem;
+  line-height: normal;
+  margin-bottom: 2rem; }
 
 .product-info {
-  font-size: 1.6rem; }
+  font-size: 2rem;
+  margin-bottom: 1rem; }
 
 .product-price-box {
   padding: 1rem 0 2rem; }
@@ -143,7 +146,8 @@ body {
   padding: 1rem 2rem; }
 
 .product-header {
-  font-size: 4rem; }
+  font-size: 4rem;
+  margin-top: -0.2rem; }
 
 .cart-product-image {
   width: 40px;
