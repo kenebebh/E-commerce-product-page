@@ -10,6 +10,7 @@
   background-color: white;
   padding: 1.5rem 1.8rem;
   border-radius: 50%;
+  z-index: 200;
 }
 
 .previous {
@@ -22,6 +23,8 @@
 
 .main-img {
   width: 100%;
+  position: relative;
+  z-index: 100;
 }
 
 .all-imgs__container {

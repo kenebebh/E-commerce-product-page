@@ -47,7 +47,7 @@ body {
 .body-container {
   width: 100vw;
   position: relative;
-  z-index: 200;
+  z-index: 100;
   transition: all 1s;
   backface-visibility: hidden; }
 
@@ -61,7 +61,8 @@ body {
   top: 40%;
   background-color: white;
   padding: 1.5rem 1.8rem;
-  border-radius: 50%; }
+  border-radius: 50%;
+  z-index: 200; }
 
 .previous {
   left: 5%; }
@@ -70,7 +71,9 @@ body {
   right: 5%; }
 
 .main-img {
-  width: 100%; }
+  width: 100%;
+  position: relative;
+  z-index: 100; }
 
 .all-imgs__container {
   display: none; }
@@ -199,7 +202,8 @@ body {
   color: white;
   position: absolute;
   left: 50%;
-  top: -30%; }
+  top: -30%;
+  visibility: hidden; }
 
 .trash-items {
   width: 15px;
@@ -218,7 +222,8 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  display: none; }
 
 .user-image {
   width: 30px; }
@@ -235,7 +240,7 @@ body {
   height: 100%;
   font-size: 2rem;
   font-weight: bold;
-  display: none; }
+  margin-top: -2rem; }
 
 .cart__total-price {
   font-weight: bold;
@@ -259,14 +264,14 @@ body {
 .nav {
   position: absolute;
   background-color: white;
-  z-index: 1000;
+  z-index: 2000;
   height: 100%;
   width: 70%;
   top: 0;
   left: 0;
   padding: 3rem;
   visibility: hidden;
-  animation: moveInLeft 1s ease-in; }
+  animation: moveInLeft 3s ease-in; }
   .nav__container {
     list-style: none; }
   .nav__list {
@@ -293,11 +298,11 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.75);
-  z-index: 500; }
+  background-color: rgba(0, 0, 0, 0.514);
+  z-index: 800; }
 
 .hidden {
-  display: none !important; }
+  display: none; }
 
 body {
   font-family: "Kumbh Sans", sans-serif;

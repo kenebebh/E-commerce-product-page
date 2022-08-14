@@ -2,14 +2,14 @@
   // display: none;
   position: absolute;
   background-color: white;
-  z-index: 1000;
+  z-index: 2000;
   height: 100%;
   width: 70%;
   top: 0;
   left: 0;
   padding: 3rem;
   visibility: hidden;
-  animation: moveInLeft 1s ease-in;
+  animation: moveInLeft 3s ease-in;
 
   &__container {
     list-style: none;
@@ -47,9 +47,9 @@
   width: 100%;
   height: 100%;
   background-color: $color-overlay;
-  z-index: 500;
+  z-index: 800;
 }
 
 .hidden {
-  display: none !important;
+  display: none;
 }
