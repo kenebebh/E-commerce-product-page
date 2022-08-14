@@ -108,6 +108,12 @@
   font-weight: bold;
   color: $color-white;
   font-size: 2rem;
+  box-shadow: 1rem 1rem 10rem $color-primary-pale-orange;
+
+  &:active {
+    // transform: scale(2);
+    transform: translateY(0.1rem);
+  }
 }
 
 .cta-cart {

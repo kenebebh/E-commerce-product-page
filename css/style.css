@@ -143,7 +143,10 @@ body {
   border-radius: 8px;
   font-weight: bold;
   color: white;
-  font-size: 2rem; }
+  font-size: 2rem;
+  box-shadow: 1rem 1rem 10rem #ffede0; }
+  .add-to-cart:active {
+    transform: translateY(0.1rem); }
 
 .cta-cart {
   margin-right: 1rem; }
