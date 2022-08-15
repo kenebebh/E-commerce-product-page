@@ -1,5 +1,4 @@
 .nav {
-  // display: none;
   position: absolute;
   background-color: white;
   z-index: 2000;
@@ -11,25 +10,64 @@
   visibility: hidden;
   animation: moveInLeft 3s ease-in;
 
+  @include respond(tab-land) {
+    visibility: visible;
+    position: static;
+    animation: none;
+    z-index: 100;
+    padding: 1rem;
+  }
+
   &__container {
     list-style: none;
+
+    @include respond(tab-land) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
   &__list {
     margin-bottom: 1.5rem;
+
+    @include respond(tab-land) {
+      margin: 0;
+    }
   }
   &__link {
     text-decoration: none;
     color: black;
     font-weight: bold;
     font-size: 2rem;
+    padding-bottom: 2rem;
+
+    @include respond(tab-land) {
+      color: $color-dark-grayish-blue;
+      font-weight: normal;
+      font-size: 1.8rem;
+      margin-right: 2rem;
+
+      &:hover {
+        border-bottom: 3px solid $color-primary-orange;
+      }
+    }
   }
   &__close-container {
     margin-bottom: 3rem;
+
+    @include respond(tab-land) {
+      display: none;
+    }
   }
 }
 
 .nav__icon-container {
   margin-right: 2rem;
+  display: flex;
+  align-items: center;
+
+  @include respond(tab-land) {
+    display: none;
+  }
 }
 
 .close {

@@ -1,7 +1,7 @@
 //variables to enable hidden parts show
 const navIcon = document.querySelector(".nav__icon");
 const navigation = document.querySelector(".nav");
-const closeIcon = document.querySelector(".close");
+const closeIcon = document.querySelectorAll(".close");
 const cartIcon = document.querySelector(".cart-icon");
 const cartDisplay = document.querySelector(".cart-display");
 const overlay = document.querySelector(".overlay");
@@ -15,9 +15,9 @@ var images = [
 ];
 let currentIndex = 0;
 
-let currentImg = document.querySelector(".main-img");
-let next = document.querySelector(".next");
-let prev = document.querySelector(".previous");
+let currentImg = document.querySelectorAll(".main-img");
+let next = document.querySelectorAll(".next");
+let prev = document.querySelectorAll(".previous");
 
 //variables for incrementing and decrementing number of items
 const plus = document.querySelector(".add");
@@ -58,15 +58,26 @@ let decrementIndex = function () {
   return currentIndex;
 };
 
-next.addEventListener("click", function () {
-  incrementIndex();
-  currentImg.setAttribute("src", images[currentIndex]);
-});
+next.forEach((btn) =>
+  btn.addEventListener("click", function () {
+    incrementIndex();
+    // currentImg.setAttribute("src", images[currentIndex]);
+    currentImg.forEach((img) => img.setAttribute("src", images[currentIndex]));
+  })
+);
 
-prev.onclick = function () {
-  decrementIndex();
-  currentImg.setAttribute("src", images[currentIndex]);
-};
+prev.forEach((btn) =>
+  btn.addEventListener("click", function () {
+    decrementIndex();
+    // currentImg.setAttribute("src", images[currentIndex]);
+    currentImg.forEach((img) => img.setAttribute("src", images[currentIndex]));
+  })
+);
+
+// prev.onclick = function () {
+//   decrementIndex();
+//   currentImg.setAttribute("src", images[currentIndex]);
+// };
 
 //functions to display and hide the navbar and cart
 navIcon.addEventListener("click", function () {
@@ -74,10 +85,13 @@ navIcon.addEventListener("click", function () {
   overlay.classList.remove("hidden");
 });
 
-closeIcon.addEventListener("click", function () {
-  toggle(navigation);
-  overlay.classList.add("hidden");
-});
+closeIcon.forEach((icon) =>
+  icon.addEventListener("click", function () {
+    toggle(navigation);
+    overlay.classList.add("hidden");
+    modalProductView.classList.add("hidden");
+  })
+);
 
 cartIcon.addEventListener("click", () => toggle(cartDisplay));
 
@@ -154,3 +168,43 @@ checkoutButton.addEventListener("click", function () {
   cartNotification.style.visibility = "hidden";
   numberBox.value = "0";
 });
+
+//functions to change the images on laptops
+const allImagesContainer = document.querySelectorAll(".all-imgs__container");
+const allImages = document.querySelectorAll(".all-pictures");
+allImagesContainer.forEach((cont) =>
+  cont.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (e.target.classList.contains("all-pictures")) {
+      allImages.forEach((img) => img.classList.remove("active"));
+      e.target.classList.add("active");
+      const clicked = e.target.dataset.tab;
+      currentImg.forEach((img) =>
+        img.setAttribute("src", `../images/image-product-${clicked}.jpg`)
+      );
+      // currentImg.setAttribute("src", `../images/image-product-${clicked}.jpg`);
+    }
+  })
+);
+// allImagesContainer.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   if (e.target.classList.contains("all-pictures")) {
+//     allImages.forEach((img) => img.classList.remove("active"));
+//     e.target.classList.add("active");
+//     const clicked = e.target.dataset.tab;
+//     currentImg.setAttribute("src", `../images/image-product-${clicked}.jpg`);
+//   }
+// });
+
+//modal display on huge screens
+const modalProductView = document.querySelector(".modal-product-view");
+
+currentImg.forEach((img) =>
+  img.addEventListener("click", function () {
+    overlay.classList.remove("hidden");
+    overlay.classList.add("overlay-blur");
+
+    modalProductView.classList.remove("hidden");
+    modalProductView.classList.add("modal");
+  })
+);
