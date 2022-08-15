@@ -58,7 +58,7 @@ body {
   @media only screen and (min-width: 112.5em) {
     .body-container {
       width: 90vw;
-      height: 100vh;
+      height: 90vh;
       margin: 0 auto; } }
 
 .main-img__container {
@@ -296,8 +296,6 @@ body {
 @media only screen and (min-width: 112.5em) {
   .product-content {
     padding: 0 5rem; }
-  .main-img__container {
-    margin-top: 3rem; }
   .main-img {
     width: 65%; }
   .all-imgs__container {
@@ -444,7 +442,7 @@ body {
 @media only screen and (min-width: 56.25em) {
   .header {
     border-bottom: 1px solid #b6bcc8;
-    padding: 1rem 2rem 1rem 2rem; }
+    padding: 5rem 2rem 1rem 2rem; }
   .cart__container {
     margin-right: 3.5rem; } }
 
