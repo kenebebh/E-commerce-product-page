@@ -1,4 +1,4 @@
-// Create a media condition that targets viewports at least 768px wide
+// Create a media condition that targets viewports at least 900px wide
 const mediaQueryTablets = window.matchMedia("(min-width: 900px)");
 //variables to enable hidden parts show
 const navIcon = document.querySelector(".nav__icon");
@@ -63,7 +63,6 @@ let decrementIndex = function () {
 next.forEach((btn) =>
   btn.addEventListener("click", function () {
     incrementIndex();
-    // currentImg.setAttribute("src", images[currentIndex]);
     currentImg.forEach((img) => img.setAttribute("src", images[currentIndex]));
   })
 );
@@ -75,11 +74,6 @@ prev.forEach((btn) =>
     currentImg.forEach((img) => img.setAttribute("src", images[currentIndex]));
   })
 );
-
-// prev.onclick = function () {
-//   decrementIndex();
-//   currentImg.setAttribute("src", images[currentIndex]);
-// };
 
 //functions to display and hide the navbar and cart
 navIcon.addEventListener("click", function () {
@@ -96,14 +90,6 @@ closeIcon.forEach((icon) =>
 );
 
 cartIcon.addEventListener("click", () => toggle(cartDisplay));
-
-// document.addEventListener("keydown", function (e) {
-//   if (e.key === ">") {
-//     console.log(e.key);
-//     incrementIndex();
-//     currentImg.setAttribute("src", images[currentIndex]);
-//   }
-// });
 
 //functions to increment number of items to be added to the cart
 const incrementValue = function () {
@@ -188,15 +174,6 @@ allImagesContainer.forEach((cont) =>
     }
   })
 );
-// allImagesContainer.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   if (e.target.classList.contains("all-pictures")) {
-//     allImages.forEach((img) => img.classList.remove("active"));
-//     e.target.classList.add("active");
-//     const clicked = e.target.dataset.tab;
-//     currentImg.setAttribute("src", `../images/image-product-${clicked}.jpg`);
-//   }
-// });
 
 //modal display on huge screens
 const modalProductView = document.querySelector(".modal-product-view");
@@ -204,7 +181,6 @@ const modalProductView = document.querySelector(".modal-product-view");
 // Check if the media query is true
 if (mediaQueryTablets.matches) {
   // Then trigger an alert
-  console.log("Media Query Matched!");
   currentImg.forEach((img) =>
     img.addEventListener("click", function () {
       overlay.classList.remove("hidden");
@@ -214,9 +190,4 @@ if (mediaQueryTablets.matches) {
       modalProductView.classList.add("modal");
     })
   );
-}
-
-if (!mediaQueryTablets.matches) {
-  // Then trigger an alert
-  console.log("Media Query not Matched!");
 }

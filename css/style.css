@@ -58,7 +58,7 @@ body {
   @media only screen and (min-width: 112.5em) {
     .body-container {
       width: 90vw;
-      height: 90vh;
+      max-height: 90vh;
       margin: 0 auto; } }
 
 .main-img__container {
@@ -286,7 +286,7 @@ body {
   .add-to-cart {
     font-size: 2rem; }
   .product-content {
-    padding: 0 0 0 5rem;
+    padding: 0 2rem 0 4rem;
     margin-top: -3rem; }
   .product-class {
     font-size: 2rem; }

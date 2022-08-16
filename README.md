@@ -11,12 +11,9 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -33,85 +30,74 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](./images/my-screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Click here...](https://github.com/kenebebh/E-commerce-product-page)
+- Live Site URL: [Click here...](https://fem-e-commerce-489a62.netlify.app/)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- SASS
+- CSS
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
+- Practiced the use of helper classes, just like in tailwind, but i created these myself. This project was a simple one, so my helper classes were just mostly to set the display to flex and specify the justify-content and align-items property
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<div class="body-container flex fd-c jc-c"></div>
 ```
 
+```html
+<header class="header flex jc-sb ai-c"></header>
+```
+
+- In mobile devices with small widths, this property makes any overflow display the ellipsis [...]
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.cart-main-details {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.product-name__cart {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 ```
 
+- This function creates a media condition that targets viewports at least 900px wide, it is then used to implement certain functions and event listeners only when were on tablets and other wider screens
+
 ```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+const mediaQueryTablets = window.matchMedia("(min-width: 900px)");
+// Check if the media query is true
+if (mediaQueryTablets.matches) {
+  // Then trigger an alert
+  console.log("Media Query Matched!");
+}
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Jonas Schmedtmann's Javascript course](https://www.udemy.com/the-complete-javascript-course/?couponCode=C3RESOURCES1010) really helped me alot in adding functionality to the page.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Jonas Schmedtmann's Advanced CSS and SASS course](https://www.udemy.com/advanced-css-and-sass/?couponCode=RESOURCES4) also taught me how to plan for and structure my html and how to position elements beautifully on the page
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Frontend Mentor - [@kenebebh](https://www.frontendmentor.io/profile/kenebebh)
+- Twitter - [@BanigoKene](https://twitter.com/BanigoKene)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- A huget thanks to my friends [Toye](https://twitter.com/adetoye_dev) and [James](https://twitter.com/TheBlackCoder7). They always help and support my progress and give me useful comments on everything i build
