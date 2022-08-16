@@ -1,3 +1,5 @@
+// Create a media condition that targets viewports at least 768px wide
+const mediaQueryTablets = window.matchMedia("(min-width: 900px)");
 //variables to enable hidden parts show
 const navIcon = document.querySelector(".nav__icon");
 const navigation = document.querySelector(".nav");
@@ -199,12 +201,22 @@ allImagesContainer.forEach((cont) =>
 //modal display on huge screens
 const modalProductView = document.querySelector(".modal-product-view");
 
-currentImg.forEach((img) =>
-  img.addEventListener("click", function () {
-    overlay.classList.remove("hidden");
-    overlay.classList.add("overlay-blur");
+// Check if the media query is true
+if (mediaQueryTablets.matches) {
+  // Then trigger an alert
+  console.log("Media Query Matched!");
+  currentImg.forEach((img) =>
+    img.addEventListener("click", function () {
+      overlay.classList.remove("hidden");
+      overlay.classList.add("overlay-blur");
 
-    modalProductView.classList.remove("hidden");
-    modalProductView.classList.add("modal");
-  })
-);
+      modalProductView.classList.remove("hidden");
+      modalProductView.classList.add("modal");
+    })
+  );
+}
+
+if (!mediaQueryTablets.matches) {
+  // Then trigger an alert
+  console.log("Media Query not Matched!");
+}
